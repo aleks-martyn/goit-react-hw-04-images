@@ -29,6 +29,7 @@ export const Searchbar = ({ onSubmit }) => {
         </SearchButton>
 
         <Input
+          onChange={handleInputChange}
           type="text"
           autoComplete="off"
           autoFocus
