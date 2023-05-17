@@ -4,7 +4,7 @@ import { GalleryItem } from './ImageGalleryItem';
 import { Modal } from './Modal';
 import { Wrap, GalleryList } from './ImageGallery.styled';
 
-export const Gallery = hits => {
+export const Gallery = ({ hits }) => {
   const [showModal, setShowModal] = useState(false);
   const [largeImageURL, setLargeImageURL] = useState('');
   const [tags, setTags] = useState('');
