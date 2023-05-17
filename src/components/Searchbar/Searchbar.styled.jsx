@@ -62,10 +62,3 @@ export const Input = styled.input`
     font-size: 18px;
   }
 `;
-
-export const ErrorText = styled.p`
-  width: 200px;
-  margin: 0;
-  margin-right: 30px;
-  color: red;
-`;
