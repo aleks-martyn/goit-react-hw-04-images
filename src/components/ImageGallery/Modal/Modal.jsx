@@ -8,12 +8,6 @@ export const Modal = ({ children, onClose }) => {
       if (event.code === 'Escape') onClose();
     };
 
-    //const handleOverlayClick = event => {
-    //  if (event.currentTarget === event.target) {
-    //    onClose();
-    //  }
-    //};
-
     window.addEventListener('keydown', handleKeyDown);
 
     return () => {
@@ -22,7 +16,11 @@ export const Modal = ({ children, onClose }) => {
   }, [onClose]);
 
   return (
-    <Overlay onClick={onClose}>
+    <Overlay
+      onClick={event => {
+        if (event.currentTarget === event.target) onClose();
+      }}
+    >
       <ModalWin>{children}</ModalWin>
     </Overlay>
   );
