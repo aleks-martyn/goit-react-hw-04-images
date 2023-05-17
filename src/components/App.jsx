@@ -9,7 +9,7 @@ import { Container, Wrap } from './App.styled';
 export const App = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [page, setPage] = useState(1);
-  const [total, setTotal] = useState(0);
+  const [total, setTotal] = useState(null);
   const [hits, setHits] = useState([]);
   const [error, setError] = useState(null);
   const [status, setStatus] = useState('idle');
@@ -34,7 +34,7 @@ export const App = () => {
   const formSubmitHandler = searchQuery => {
     setSearchQuery(searchQuery);
     setPage(1);
-    setTotal(0);
+    setTotal(null);
     setError(null);
     setHits([]);
     setStatus('idle');
