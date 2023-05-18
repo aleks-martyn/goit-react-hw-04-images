@@ -22,8 +22,8 @@ export const App = () => {
       .fetchImages(searchQuery, page)
       .then(({ hits, total }) => {
         setHits(prev => [...prev, ...hits]);
-        setStatus('resolved');
         setTotal(total);
+        setStatus('resolved');
       })
       .catch(error => {
         setError(error);
